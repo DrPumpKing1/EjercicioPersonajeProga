@@ -36,7 +36,7 @@ namespace Personajes
 
         public virtual bool TakeDamageIsDead(float damage, Character attacker)
         {
-            _health -= Math.Clamp(damage, 0f, _maxHealth);
+            _health = Math.Clamp(_health - damage, 0f, _maxHealth);
 
             Console.WriteLine($"{attacker.Name} dealt {damage} damage to {_name}!");
 
