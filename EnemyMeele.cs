@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Personajes
 {
-    internal class EnemyMeele : Character
+    internal class EnemyMeele : Character, IDamageDealer
     {
         private const int MAX_DURABILITY = 5;
 
@@ -19,7 +19,7 @@ namespace Personajes
             _type = "Meele";
         }
 
-        public override float DealDamage()
+        public float DealDamage()
         {
             if(_durability > 0) _durability--;
 

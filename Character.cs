@@ -49,11 +49,6 @@ namespace Personajes
             }
         }
 
-        public virtual float DealDamage()
-        {
-            return _attack;
-        }
-
         public virtual bool CheckDeath()
         {
             return _health <= 0f;

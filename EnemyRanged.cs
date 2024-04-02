@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Personajes
 {
-    internal class EnemyRanged : Character
+    internal class EnemyRanged : Character, IDamageDealer
     {
         private const int MAX_AMMO = 3;
 
@@ -19,7 +19,7 @@ namespace Personajes
             _type = "Ranged";
         }
 
-        public override float DealDamage()
+        public float DealDamage()
         {
             if (_ammo > 0) _ammo--;
             else

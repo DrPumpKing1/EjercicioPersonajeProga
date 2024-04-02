@@ -94,7 +94,7 @@ do
     {
         if (enemy.CheckDeath()) continue;
 
-        float damage = enemy.DealDamage();
+        float damage = (enemy as IDamageDealer).DealDamage();
         player.TakeDamageIsDead(damage, enemy);
 
         if (player.CheckDeath())

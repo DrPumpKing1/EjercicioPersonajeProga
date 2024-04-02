@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Personajes
 {
-    internal class Hero : Character
+    internal class Hero : Character, IDamageDealer
     {
         public enum HeroArchetype
         {
@@ -123,7 +123,7 @@ namespace Personajes
             else return true;
         }
 
-        public override float DealDamage()
+        public float DealDamage()
         {
             if(barbarian && inmortalityTrigger && inmortality)
             {
