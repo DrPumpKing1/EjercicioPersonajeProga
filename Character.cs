@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Personajes
 {
-    internal class Character
+    internal abstract class Character
     {
         protected string _name;
 
